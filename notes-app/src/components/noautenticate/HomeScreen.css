@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.Home{
+    background-image: linear-gradient(180deg, rgba(38, 33, 100, 0.8) 0%, #262164 100%);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 740px;
+}
+.appName{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    gap:10px;
+}
+
+.tittle{
+    font-family:'Love Ya Like A Sister', cursive;
+    font-size: 100px;
+    line-height: 100px;
+    color: aliceblue;
+    align-self: center;
+    padding: 2px;
+}
+.subtittle{
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 40px;
+    color: aliceblue;
+    align-self: center;
+}
+.btnGoogle{
+    border-radius: 30px;
+    font-size: x-large;
+    color: aliceblue;
+    border: solid;
+    border-width: 5px;
+    border-color: #B96ADF;
+    background: transparent;
+    padding: 8px;
+    width: 40%;
+    align-self: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    text-align:left;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    margin: 40px ;
+}
+.btnGoogle:hover{
+    background:  linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
+}
+.btnGoogle:focus{
+    background:  linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
+}
+  
+.iconG{
+    width: 40px;
+    height: 40px;
+    justify-self: flex-start;
+}
+.imageContainer{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 50%;
+}
+.appLogo{
+    width: 85%;
+}
+.foot{
+    background-color: #B96ADF;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.made{
+    color: #262164;
+    font-size: large;
+    font-family: 'Nunito', sans-serif;
+}
+
+@media only screen
+and (min-width: 786px)
+and (max-width: 1024px)
+and (orientation: portrait) {
+    
+    .Home{
+        background-image: linear-gradient(180deg, rgba(38, 33, 100, 0.8) 0%, #262164 100%);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height:100vh;
+    }
+    .imageContainer{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 100%;
+    }
+    .appLogo{
+        width: 80%;
+        margin:100px 0px 50px 0px;
+    }
+    .appName{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        gap:10px;
+    }
+
+    @media only screen 
+    and (min-device-width: 320px) 
+    and (max-device-width: 480px)
+    and (orientation: portrait) {
+
+    .Home{
+        background-image: linear-gradient(180deg, rgba(38, 33, 100, 0.8) 0%, #262164 100%);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height:100vh;
+    }
+    .imageContainer{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 100%;
+    }
+    .appLogo{
+        width: 80%;
+        margin:100px 0px 50px 0px;
+    }
+    .appName{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        gap:10px
+
+}
+    
+} 
+}
+  
