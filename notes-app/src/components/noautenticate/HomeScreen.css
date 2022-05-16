@@ -9,7 +9,8 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    height: 740px;
+    height:100vh;
+
 }
 .appName{
     display: flex;
@@ -42,7 +43,7 @@
     border-color: #B96ADF;
     background: transparent;
     padding: 8px;
-    width: 40%;
+    width: 45%;
     align-self: center;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
@@ -102,7 +103,6 @@ and (orientation: portrait) {
         width: 100%;
         display: flex;
         flex-direction: column;
-        height:100vh;
     }
     .imageContainer{
         display: flex;
@@ -120,7 +120,7 @@ and (orientation: portrait) {
         width: 100%;
         justify-content: center;
         gap:10px;
-    }
+    } }
 
     @media only screen 
     and (min-device-width: 320px) 
@@ -150,9 +150,14 @@ and (orientation: portrait) {
         width: 100%;
         justify-content: center;
         gap:10px
-
 }
+    .btnGoogle{
+    width: 80% }
     
-} 
+    .tittle{
+        font-size: 80px;
 }
-  
+.subtittle{
+    font-size: 24px;
+}
+}

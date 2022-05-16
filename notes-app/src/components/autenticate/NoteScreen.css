@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.headblock {
+    display: flex;
+    flex-direction: row;
+    background-color:#262164;
+    width: 100%;
+    border-color: #E8B812;
+    border-style: solid;
+    border-width: 0px 0px 10px 0px;
+}
+
+.headerTittle{
+    font-family:'Love Ya Like A Sister', cursive;
+    font-size: 80px;
+    line-height: 80px;
+    color: aliceblue;
+    align-self: center;
+    padding: 2px;
+}
+.btnLogOut{
+    align-self: center;
+    justify-self: flex-end;
+}
+
+.notesBoard{
+    background-color:#262164;
+    width: 50%;
+    height:80vh;
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+}
+
+.inputs{
+    background-color:#c779d0cb;
+    display:flex;
+    flex-direction:column;
+    justify-items: center;
+    align-items: center;
+    align-self: flex-start;
+    justify-self: center;
+    border-radius: 10px;
+    width: 80%;
+    height: 250px;
+    padding: 40px;
+    
+}
+
+.writeNote {
+    width: 400px;
+    height: 200px;
+    justify-self: center;
+    font-size: x-large;
+    font-family: Nunito;
+    border:none;
+}
+
+.writeTittle {
+    width: 400px;
+    height: 50px;
+    justify-self: center;
+    font-size: x-large;
+    font-family: Nunito;
+    border: none none 3px none;
+
+}
+
+.btnCreate{
+    border-radius: 30px;
+    font-size: x-large;
+    color: aliceblue;
+    border: solid;
+    border-width: 5px;
+    border-color: #B96ADF;
+    background: transparent;
+    padding: 8px;
+    width: 35%;
+    align-self: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    text-align:left;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    margin: 40px ;
+}
+.btnCreate:hover{
+    background:  linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
+}
+.btnCreate:focus{
+    background:  linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
+}
