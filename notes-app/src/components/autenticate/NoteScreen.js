@@ -12,6 +12,9 @@ export const NoteScreen = ({logOut}) =>
     <section className='notesBoard'> 
         <SaveNotes/>
     </section>
+    <footer className="footNotes">
+      <h4 className="made">Made with 💛 by Abril Quintero</h4>
+    </footer>
     </>    
     );
 }

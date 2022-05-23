@@ -21,7 +21,7 @@ export const HomeScreen = ({loginWithGoogle}) =>
     </section>
     </section>
     <footer className="foot">
-      <h4 className="made">Made with love by Abril Quintero</h4>
+      <h4 className="made">Made with 💛 by Abril Quintero</h4>
     </footer>
     </>    
     );
