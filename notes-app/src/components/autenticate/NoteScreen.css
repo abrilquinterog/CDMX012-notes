@@ -5,6 +5,9 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-color: #262164;
+}
 
 .headblock {
     display: flex;
@@ -14,6 +17,9 @@
     border-color: #E8B812;
     border-style: solid;
     border-width: 0px 0px 10px 0px;
+    position: sticky;
+    top:0;
+    z-index:5;
 }
 
 .headerTittle{
@@ -22,24 +28,41 @@
     line-height: 80px;
     color: aliceblue;
     align-self: center;
-    padding: 2px;
+    padding: 20px;
 }
+
 .btnLogOut{
     align-self: center;
-    justify-self: flex-end;
+    justify-self:flex-end;
+    position: absolute;
+    right: 50px;
+    width: 100px;
+    height: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    background-color: #e3bb27;
 }
 
 .notesBoard{
     background-color:#262164;
-    width: 50%;
-    height:80vh;
+    width: 100;
+    height:100;
     display: flex;
     padding: 30px;
     flex-direction: column;
+    align-items: center;
+}
+
+.creationContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
 }
 
 .inputs{
-    background-color:#c779d0cb;
+    background-color:#c779d0dc;
     display:flex;
     flex-direction:column;
     justify-items: center;
@@ -47,7 +70,7 @@
     align-self: flex-start;
     justify-self: center;
     border-radius: 10px;
-    width: 80%;
+    width: 500px;
     height: 250px;
     padding: 40px;
     
@@ -60,6 +83,7 @@
     font-size: x-large;
     font-family: Nunito;
     border:none;
+    margin: 5px;
 }
 
 .writeTittle {
@@ -68,7 +92,8 @@
     justify-self: center;
     font-size: x-large;
     font-family: Nunito;
-    border: none none 3px none;
+    border: none;
+    margin: 5px;
 
 }
 
@@ -82,7 +107,6 @@
     background: transparent;
     padding: 8px;
     width: 35%;
-    align-self: center;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     display: flex;
@@ -90,7 +114,6 @@
     text-align:left;
     justify-content: space-around;
     align-items: center;
-    position: relative;
     cursor: pointer;
     margin: 40px ;
 }
@@ -100,3 +123,68 @@
 .btnCreate:focus{
     background:  linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
 }
+.post{
+    background-color: #ffffffdb;
+    color: black;
+    border-radius: 6px;
+    border-color: #E8B812;
+    border-style: solid;
+    border-width: 3px;
+    margin: 10px;
+    padding: 15px;
+}
+
+.postWall{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footNotes{
+    background-color: #B96ADF;
+    width: 100%;
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+.noteTittle{
+    font-family: Nunito;
+    font-size: large;
+    font-weight: bold;
+    padding: 2px;
+}
+
+.noteDescription{
+    font-family: Nunito;
+    font-size: medium;
+    font-weight:500;
+}
+
+@media only screen
+and (min-width: 768px)
+and (max-width: 1024px)
+and (orientation: portrait){
+
+.postWall{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+
+.headerTittle{
+    font-family:'Love Ya Like A Sister', cursive;
+    font-size: 60px;
+    line-height: 60px;
+    color: aliceblue;
+    align-self: center;
+    padding: 25px;  
+    margin: 5px;
+;  
+        }    
+    
+}
+
+

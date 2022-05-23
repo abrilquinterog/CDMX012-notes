@@ -1,6 +1,6 @@
 import { useState, useEffect} from "react"
 import { db } from "./firebaseConfig"
-import { collection, getDocs, addDoc } from "firebase/firestore"
+import { collection, getDocs, addDoc, serverTimestamp, query, orderBy } from "firebase/firestore"
 
 
 
@@ -14,13 +14,13 @@ const [notes, setNotes] = useState([]);
 const notesCollectionRef = collection(db, "notes")
 
 const createNote = async () =>{
- await addDoc(notesCollectionRef,{ tittle: newTittle, description: newDescription});
+ await addDoc(notesCollectionRef,{ tittle: newTittle, description: newDescription, createdAt: serverTimestamp()});
 };
 
 useEffect(() => {
 
     const getNotes = async () => {
-         const data= await getDocs(notesCollectionRef);
+         const data= await getDocs(query(notesCollectionRef, orderBy('createdAt', "desc")));
          setNotes(data.docs.map((doc) =>({...doc.data(), id: doc.id} )));
 
     }
@@ -32,20 +32,22 @@ useEffect(() => {
 
 return (
 <>
-<div>
+<div className='creationContainer'>
 <form className='inputs'>
-    <input className='tittle02' placeholder='Tittle'onChange={(event)=>{setNewTittle(event.target.value);
+    <input className='writeTittle' placeholder='Tittle'onChange={(event)=>{setNewTittle(event.target.value);
     }}></input>
-    <textarea className='writeNote02' placeholder='Write your note'onChange={(event)=>{setNewDescription(event.target.value);
+    <textarea className='writeNote' placeholder='Write your note'onChange={(event)=>{setNewDescription(event.target.value);
     }}></textarea>
     </form>
-    <button onClick={createNote}>Create note</button>
-</div>    
-<div>
+    <button className='btnCreate' onClick={createNote}> CREATE 💛</button>
+</div>   
+<div className="postWall">
 {notes.map((note)=>{
-    return <div>
-        <h1>{note.tittle}</h1>
-        <h1>{note.description}</h1>
+    return <div className="post">
+        <h1 className="noteTittle">{note.tittle}</h1>
+        <p className="noteDescription">{note.description}</p>
+        <button>Editar</button>
+        <button>Borrar</button>
         </div>})}
 </div>
 </>
