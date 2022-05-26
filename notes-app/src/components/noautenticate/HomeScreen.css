@@ -33,6 +33,7 @@
     font-size: 40px;
     color: aliceblue;
     align-self: center;
+    font-weight: lighter;
 }
 .btnGoogle{
     border-radius: 30px;
@@ -43,7 +44,7 @@
     border-color: #B96ADF;
     background: transparent;
     padding: 8px;
-    width: 45%;
+    width: 60%;
     align-self: center;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
@@ -120,7 +121,11 @@ and (orientation: portrait) {
         width: 100%;
         justify-content: center;
         gap:10px;
-    } }
+    } 
+    .btnGoogle{
+        width: 40%;
+    }
+}
 
     @media only screen 
     and (min-device-width: 320px) 
