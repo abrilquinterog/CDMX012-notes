@@ -30,21 +30,21 @@
 }
 .subtittle{
     font-family: 'Love Ya Like A Sister', cursive;
-    font-size: 40px;
+    font-size: 30px;
     color: aliceblue;
     align-self: center;
     font-weight: lighter;
 }
 .btnGoogle{
     border-radius: 30px;
-    font-size: x-large;
+    font-size: large;
     color: aliceblue;
     border: solid;
     border-width: 5px;
     border-color: #B96ADF;
     background: transparent;
     padding: 8px;
-    width: 60%;
+    width: 50%;
     align-self: center;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
@@ -65,8 +65,8 @@
 }
   
 .iconG{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     justify-self: flex-start;
 }
 .imageContainer{
@@ -123,7 +123,8 @@ and (orientation: portrait) {
         gap:10px;
     } 
     .btnGoogle{
-        width: 40%;
+        width: 30%;
+        font-size: large;
     }
 }
 

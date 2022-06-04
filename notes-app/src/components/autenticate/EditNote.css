@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap');
+
+.editingBoard {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.updateTittle{
+    color: white;
+    padding: 10px;
+    font-family: Nunito;
+    font-size: 40px;
+}
+
+.inputs2{
+    align-self: center;
+    background-color:#c779d0dc;
+    display:flex;
+    flex-direction:column;
+    justify-items: center;
+    align-items: center;
+    justify-self: center;
+    border-radius: 10px;
+    width: 500px;
+    height: 470px;
+    padding: 40px;
+}
+
+.btnUpdate{
+    border-radius: 30px;
+    font-size: x-large;
+    color:white;
+    border: solid;
+    border-width: 5px;
+    border-color: #E8B812;
+    background: #262164;
+    padding: 8px;
+    width: 45%;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    text-align:left;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    margin: 20px;
+}
+.btnUpdate:hover{
+    background:  linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
+}
+.btnUpdate:focus{
+    background:  linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
+}
+
+.writeTittleU{
+    width: 450px;
+    height: 50px;
+    justify-self: center;
+    font-size: x-large;
+    font-family: Nunito;
+    border: none;
+    margin: 5px;
+}
+
+.writeNoteU{
+    width: 450px;
+    height: 300px;
+    justify-self: center;
+    font-size: x-large;
+    font-family: Nunito;
+    border:none;
+    margin: 5px 5px 20px 5px;
+}

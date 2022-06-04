@@ -3,6 +3,7 @@ import { SaveNotes } from '../../lib/firestore';
 
 export const NoteScreen = ({logOut}) => 
 {
+    
     return(
     <>
     <header className='headblock'>

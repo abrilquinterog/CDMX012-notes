@@ -1,6 +1,6 @@
 import { useState, useEffect} from "react"
 import { db, auth } from "./firebaseConfig"
-import { collection, getDocs, addDoc, serverTimestamp, query, orderBy, where } from "firebase/firestore"
+import { collection, getDocs, addDoc, serverTimestamp, query, orderBy } from "firebase/firestore"
 import { deletePost } from "./delete"
 import Swal from 'sweetalert2'
 import withReactContent from "sweetalert2-react-content";
@@ -19,25 +19,28 @@ const [notes, setNotes] = useState([]);
 //Referencia de la database
 const notesCollectionRef = collection(db, "notes")
 
-const createNote = async () =>{
- await addDoc(notesCollectionRef,{ tittle: newTittle, description: newDescription, createdAt: serverTimestamp(), user: auth.currentUser.email});
+const createNote = async (e) =>{
+ await addDoc(notesCollectionRef,{ tittle: newTittle, 
+  description: newDescription, 
+  createdAt: serverTimestamp(), 
+  user: auth.currentUser.email});
 };
 
-useEffect(() => {
+
 
     const getNotes = async () => {
-         const userNow = auth.currentUser.email;
+         //const userNow = auth.currentUser.uid;
          const data= await getDocs(query(notesCollectionRef, orderBy('createdAt', "desc")));
          setNotes(data.docs.map((doc) =>({...doc.data(), id: doc.id} )));
          
     }
 
-    getNotes()
-
+    useEffect(() => {
+     getNotes()
 
 }, [])
 
-const navigate= useNavigate();
+
 const confirmDelete = (id) => {
     MySwal.fire({
       title: "Are you sure?",
@@ -50,30 +53,44 @@ const confirmDelete = (id) => {
     }).then((result) => {
       if (result.isConfirmed) {
         deletePost(id);
-        navigate("/");
         MySwal.fire("Deleted!", "Your note has been deleted.", "success");
+        getNotes();
       }
     });
   };
 
+const navigate = useNavigate();
+    const handleOnClick = (id) =>
+    {
+      navigate('/edit/'+ id ,{state:{test:'prop'}});
+      //objeto de la nota
+      
+    }
 
 return (
 <>
 <div className='creationContainer'>
-<form className='inputs'>
-    <input className='writeTittle' placeholder='Tittle'onChange={(event)=>{setNewTittle(event.target.value);
+<form className='inputs'onSubmit={createNote}>
+    <input className='writeTittle' placeholder='Tittle'
+    value={newTittle}
+    onChange={(event)=>{setNewTittle(event.target.value);
     }}></input>
-    <textarea className='writeNote' placeholder='Write your note'onChange={(event)=>{setNewDescription(event.target.value);
+    <textarea className='writeNote' placeholder='Write your note'
+    value={newDescription}
+    onChange={(event)=>{setNewDescription(event.target.value);
     }}></textarea>
+    <button className='btnCreate'type='submit' > CREATE 💛</button>
     </form>
-    <button className='btnCreate' onClick={createNote}> CREATE 💛</button>
 </div>   
 <div className="postWall">
 {notes.map((note)=>{
-    return <div className="post">
+    return <div className="post" >
         <h1 className="noteTittle">{note.tittle}</h1>
         <p className="noteDescription">{note.description}</p>
+        <section className="buttonsBox">
+        <button className='editBtn' onClick={() => {handleOnClick(note.id)}}> Edit </button>
         <button className='deleteBtn' onClick={() => {confirmDelete(note.id)}}> Delete </button>
+        </section>
         </div>})}
 </div>
 </>
