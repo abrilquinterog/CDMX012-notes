@@ -12,7 +12,8 @@ body{
 .headblock {
     display: flex;
     flex-direction: row;
-    background-color:#262164;
+    background-image: url(https://i.ibb.co/NxsGW37/header02.png);
+    background-size : cover;
     width: 100%;
     border-color: #E8B812;
     border-style: solid;
@@ -25,7 +26,6 @@ body{
 .headerTittle{
     font-family:'Love Ya Like A Sister', cursive;
     font-size: 50px;
-    line-height: 50px;
     color: aliceblue;
     align-self: center;
     padding: 10px;
@@ -40,7 +40,7 @@ body{
     height: 40px;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
-    background-color: #e3bb27;
+    background-color: whitesmoke;
     font-size: large;
 }
 
@@ -71,15 +71,16 @@ body{
     align-self: flex-start;
     justify-self: center;
     border-radius: 10px;
-    width: 500px;
-    height: 250px;
-    padding: 40px;
+    width: 550px;
+    height: 370px;
+    padding: 30px 20px 10px 20px;
+    margin:10px 10px 30px 10px;
     
 }
 
 .writeNote {
-    width: 400px;
-    height: 200px;
+    width: 450px;
+    height: 250px;
     justify-self: center;
     font-size: x-large;
     font-family: Nunito;
@@ -88,7 +89,7 @@ body{
 }
 
 .writeTittle {
-    width: 400px;
+    width: 450px;
     height: 50px;
     justify-self: center;
     font-size: x-large;
@@ -105,7 +106,7 @@ body{
     border: solid;
     border-width: 5px;
     border-color: #B96ADF;
-    background: transparent;
+    background: #262164;
     padding: 8px;
     width: 35%;
     font-family: 'Nunito', sans-serif;
@@ -116,7 +117,7 @@ body{
     justify-content: space-around;
     align-items: center;
     cursor: pointer;
-    margin: 40px ;
+    margin: 5px ;
 }
 .btnCreate:hover{
     background:  linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
@@ -171,10 +172,25 @@ body{
     font-family: 'Nunito', sans-serif;
     font-size: large;
     align-self: flex-end;
-    background-color: #ba6adfab;
-    padding: 3px;
+    background-color: #E8B812;
+    padding: 8px;
     font-weight: bold;
     margin: 5px;
+    border: none;
+}
+.editBtn {
+    font-family: 'Nunito', sans-serif;
+    font-size: large;
+    align-self: flex-start;
+    background-color: #E8B812;
+    padding: 8px;
+    font-weight: bold;
+    margin: 5px;
+    padding: 8px;
+    border:none;
+}
+.buttonsBox{
+    align-self: flex-end;
 }
 
 @media only screen
